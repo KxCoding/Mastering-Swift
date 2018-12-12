@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='raw' executeOnSourceChanges='false'>
+    <pages>
+        <page name='Bitwise NOT'/>
+        <page name='Bitwise AND'/>
+        <page name='Bitwise OR'/>
+        <page name='Bitwise XOR'/>
+        <page name='Bitwise Left Shift'/>
+        <page name='Bitwise Right Shift'/>
+    </pages>
+</playground>
