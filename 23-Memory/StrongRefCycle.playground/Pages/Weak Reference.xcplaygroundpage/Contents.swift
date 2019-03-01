@@ -24,14 +24,14 @@
 import Foundation
 
 /*:
- # Unowned Reference
- ![unowned](unowned.png)
+ # Weak Reference
+ ![weak](weak.png)
  */
 
 class Person {
    var name = "John Doe"
    var car: Car?
-
+   
    deinit {
       print("person deinit")
    }
@@ -39,17 +39,25 @@ class Person {
 
 class Car {
    var model: String
-   var lessee: Person?
-
+   weak var lessee: Person?
+   
    init(model: String) {
       self.model = model
    }
-
+   
    deinit {
       print("car deinit")
    }
 }
 
+var person: Person? = Person()
+var rentedCar: Car? = Car(model: "Porsche")
+
+person?.car = rentedCar
+rentedCar?.lessee = person
+
+person = nil
+rentedCar = nil
 
 
 
@@ -62,3 +70,8 @@ class Car {
 
 
 
+
+
+
+
+//: [Next](@next)

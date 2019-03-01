@@ -19,14 +19,13 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//: [Previous](@previous)
 
 import Foundation
 
 /*:
- # Weak Reference
- ![weak](weak.png)
+ # Strong Reference Cycle
  */
+
 
 class Person {
    var name = "John Doe"
@@ -50,18 +49,10 @@ class Car {
    }
 }
 
+var person: Person? = Person()
+var rentedCar: Car? = Car(model: "Porsche")
 
-
-
-
-
-
-
-
-
-
-
-
+person?.car = rentedCar
 
 
 

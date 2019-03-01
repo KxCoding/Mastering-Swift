@@ -19,46 +19,28 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
- # Strong Reference Cycle
+ # do-catch Statements
+ ![do-catch](do-catch.png)
  */
 
-
-class Person {
-   var name = "John Doe"
-   var car: Car?
-   
-   deinit {
-      print("person deinit")
-   }
+enum DataParsingError: Error {
+   case invalidType
+   case invalidField
+   case missingRequiredField(String)
 }
 
-class Car {
-   var model: String
-   var lessee: Person?
-   
-   init(model: String) {
-      self.model = model
+func parsing(data: [String: Any]) throws {
+   guard let _ = data["name"] else {
+      throw DataParsingError.missingRequiredField("name")
    }
    
-   deinit {
-      print("car deinit")
+   guard let _ = data["age"] as? Int else {
+      throw DataParsingError.invalidType
    }
+   
+   // Parsing
 }
 
-
-
-
-
-
-
-
-
-
-
-
-//: [Next](@next)

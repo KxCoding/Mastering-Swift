@@ -19,60 +19,30 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
 import UIKit
 
 /*:
- # Generics
+ # optional try
+ ![optional-try](optional-try.png)
  */
 
-func swapInteger(lhs: inout Int, rhs: inout Int) {
-   let tmp = lhs
-   lhs = rhs
-   rhs = tmp
+enum DataParsingError: Error {
+   case invalidType
+   case invalidField
+   case missingRequiredField(String)
 }
 
-var a = 10
-var b = 20
-
-swapInteger(lhs: &a, rhs: &b)
-a
-b
-
-
-func swapInteger16(lhs: inout Int16, rhs: inout Int16) {
-   // ...
+func parsing(data: [String: Any]) throws {
+   guard let _ = data["name"] else {
+      throw DataParsingError.missingRequiredField("name")
+   }
+   
+   guard let _ = data["age"] as? Int else {
+      throw DataParsingError.invalidType
+   }
+   
+   // Parsing
 }
 
-func swapInteger64(lhs: inout Int64, rhs: inout Int64) {
-   // ...
-}
-
-func swapDouble(lhs: inout Double, rhs: inout Double) {
-   // ...
-}
-
-
-/*:
- ## Generic Function
- ![generic-function](generic-function.png)
- */
-
-func swapValue<T>(lhs: inout T, rhs: inout T) {
-   let tmp = lhs
-   lhs = rhs
-   rhs = tmp
-}
-
-
-
-
-
-
-
-
-
-
-//: [Next](@next)
 
 

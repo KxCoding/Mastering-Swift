@@ -19,51 +19,45 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+//: [Previous](@previous)
 
-import UIKit
-
-/*:
- # Generics
- */
-
-func swapInteger(lhs: inout Int, rhs: inout Int) {
-   let tmp = lhs
-   lhs = rhs
-   rhs = tmp
-}
-
-var a = 10
-var b = 20
-
-swapInteger(lhs: &a, rhs: &b)
-a
-b
-
-
-func swapInteger16(lhs: inout Int16, rhs: inout Int16) {
-   // ...
-}
-
-func swapInteger64(lhs: inout Int64, rhs: inout Int64) {
-   // ...
-}
-
-func swapDouble(lhs: inout Double, rhs: inout Double) {
-   // ...
-}
-
+import Foundation
 
 /*:
- ## Generic Function
- ![generic-function](generic-function.png)
+ # Unowned Reference
+ ![unowned](unowned.png)
  */
 
-func swapValue<T>(lhs: inout T, rhs: inout T) {
-   let tmp = lhs
-   lhs = rhs
-   rhs = tmp
+class Person {
+   var name = "John Doe"
+   var car: Car?
+
+   deinit {
+      print("person deinit")
+   }
 }
 
+class Car {
+   var model: String
+   unowned var lessee: Person
+
+   init(model: String, lessee: Person) {
+      self.model = model
+      self.lessee = lessee
+   }
+
+   deinit {
+      print("car deinit")
+   }
+}
+
+var person: Person? = Person()
+var rentedCar: Car? = Car(model: "Porsche", lessee: person!)
+
+person?.car = rentedCar
+
+person = nil
+rentedCar = nil
 
 
 
@@ -73,6 +67,6 @@ func swapValue<T>(lhs: inout T, rhs: inout T) {
 
 
 
-//: [Next](@next)
+
 
 
