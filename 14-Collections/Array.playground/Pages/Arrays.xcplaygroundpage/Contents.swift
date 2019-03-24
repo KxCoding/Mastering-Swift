@@ -19,17 +19,33 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-import UIKit
+
+import Foundation
 
 /*:
- # Operator Methods
- ## Syntax
- ![syntax](syntax.png)
+ # Array
+ */
+
+/*:
+ ## Array Literal
+ ![array-literal](array-literal.png)
  */
 
 
 
 
 
+
+
+
+
+
+
+
+/*:
+ ## Array Type
+ ![array-type1](array-type1.png)
+ ![array-type2](array-type2.png)
+ */
 
 

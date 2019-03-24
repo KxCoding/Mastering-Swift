@@ -19,13 +19,24 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-import UIKit
+import Foundation
 
 /*:
- # Operator Methods
- ## Syntax
- ![syntax](syntax.png)
+ # Set
+ ## Set Type
+ ![set-type](set-type.png)
  */
+
+
+
+
+
+
+
+
+
+
+
 
 
 

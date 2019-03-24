@@ -22,14 +22,6 @@
 import UIKit
 
 /*:
- # Operator Methods
- ## Syntax
- ![syntax](syntax.png)
+ # String Editing
  */
-
-
-
-
-
-
 
