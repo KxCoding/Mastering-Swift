@@ -19,13 +19,56 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-import UIKit
+//: [Previous](@previous)
+
+import Foundation
 
 /*:
- # Property Requirements
- ![property](property.png)
+ # Result Type in Async Code
  */
 
+guard let url = URL(string: "http://kxcoding-study.azurewebsites.net/api/books") else {
+   fatalError("invalid url")
+}
+
+struct BookListData: Codable {
+   let code: Int
+   let totalCount: Int
+   let list: [Book]
+}
+
+struct Book: Codable {
+   let title: String
+}
+
+enum ApiError: Error {
+   case general
+   case invalidFormat
+}
+
+typealias CompletionHandler = (BookListData?, Error?) -> ()
+
+func parseBookList(completion: @escaping CompletionHandler) {
+   let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+      if let error = error {
+         completion(nil, error)
+         return
+      }
+
+      guard let data = data else {
+         completion(nil, nil)
+         return
+      }
+
+      do {
+         let list = try JSONDecoder().decode(BookListData.self, from: data)
+         completion(list, nil)
+      } catch {
+         completion(nil, error)
+      }
+   }
+   task.resume()
+}
 
 
 
@@ -35,5 +78,4 @@ import UIKit
 
 
 
-
-
+//: [Next](@next)

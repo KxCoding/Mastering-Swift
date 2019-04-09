@@ -19,21 +19,28 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-import UIKit
+//: [Previous](@previous)
+
+import Foundation
 
 /*:
- # Property Requirements
- ![property](property.png)
+ # Higher-order Functions
  */
 
+enum MyError: Error {
+   case error
+}
 
+enum ValueError: Error {
+   case evenNumber
+}
 
-
-
-
-
-
-
-
+func doSomethingWithResult(data: Int) -> Result<Int, MyError> {
+   guard data.isMultiple(of: 2) else {
+      return .failure(MyError.error)
+   }
+   
+   return .success(data)
+}
 
 

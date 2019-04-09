@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2018 KxCoding <kky0317@gmail.com>
+//  Copyright (c) 2019 KxCoding <kky0317@gmail.com>
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -19,12 +19,48 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-import UIKit
+
+import Foundation
 
 /*:
- # Property Requirements
- ![property](property.png)
+ # Result Type
  */
+
+enum NumberError: Error {
+   case negativeNumber
+   case evenNumber
+}
+
+enum AnotherNumberError: Error {
+   case tooLarge
+}
+
+func process(oddNumber: Int) throws -> Int {
+   guard oddNumber >= 0 else {
+      throw NumberError.negativeNumber
+   }
+   
+   guard !oddNumber.isMultiple(of: 2) else {
+      throw NumberError.evenNumber
+   }
+   
+   return oddNumber * 2
+}
+
+do {
+   let result = try process(oddNumber: 1)
+   print(result)
+} catch {
+   print(error.localizedDescription)
+}
+
+
+
+
+
+
+
+
 
 
 
