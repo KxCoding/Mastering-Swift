@@ -26,13 +26,13 @@ import UIKit
  ![operator](operator.png)
  
  ### Reserved Tokens
- (, ), {, }, [, ], ., ,, :, ;, =, @, #, &(prefix operator), ->, `, ?, !(postfix operator), /*, */
+ (, ), {, }, [, ], ., ,, :, ;, =, @, #, &(prefix operator), ->, `, ?, !(postfix operator), \/*, *\/
  
  ### First Character
  /, =, -, +, !, *, %, <, >, &, |, ^, ?, ~
  
  ![custom-operator](custom-operator.png)
- */
+ */*/
 
 
 
