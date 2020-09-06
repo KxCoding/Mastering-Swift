@@ -27,13 +27,16 @@ import UIKit
  */
 
 
-
+Int8.min
+Int8.max
 /*:
  ## Overflow Addition Operator
  ````
  a &+ b
  ````
  */
+let a: Int8 = Int8.max
+let b: Int8 = a &+ 1
 
 
 
@@ -52,6 +55,7 @@ import UIKit
  a &* b
  ````
  */
+let e: Int8 = Int8.max &* 2
 
 
 

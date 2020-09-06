@@ -34,8 +34,12 @@ import UIKit
 
 
 
+typealias Centimeter = Double
+let a: Double = 1.55
+let b: Centimeter = 1.55
 
-
+type(of: a)
+type(of: b)
 
 
 

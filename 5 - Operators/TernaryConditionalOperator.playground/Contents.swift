@@ -29,6 +29,29 @@ import UIKit
 
 
 
+12 > 34 ? "true" : "false"
+
+let a = 12
+var b = 34
+
+b = a
+// b: lvalue, a: rvalue
+
+1...10
+// 10...1 // 컴파일 에러
+(1...10).reversed()
+12.34 ... 56.78
+
+let list = [1, 2, 3, 4, 5]
+list[...2]
+list[2...]
+
+list[..<2]
+
+let infiniteRange = ...5 // 무한대
+let range = 0...5
+range.contains(10)
+range.contains(1)
 
 
 

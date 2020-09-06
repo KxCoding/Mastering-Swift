@@ -53,7 +53,14 @@ import UIKit
  */
 
 
+for _ in 1...5 {
+    print("hello") // 와일드카드 패턴을 사용하여 생략
+}
 
+// 짝수만
+for num in stride(from: 5, to: 10, by: 2) {
+    print(num)
+}
 
 
 

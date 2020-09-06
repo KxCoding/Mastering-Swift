@@ -32,7 +32,7 @@ import UIKit
  a == b
  ````
  */
-
+"Swift" == "swift"
 
 
 /*:
@@ -50,7 +50,7 @@ import UIKit
  a > b
  ````
  */
-
+"swift" > "Swift"
 
 
 /*:

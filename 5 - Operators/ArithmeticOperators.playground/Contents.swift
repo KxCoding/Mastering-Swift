@@ -78,8 +78,13 @@ import UIKit
  a / b
  ````
  */
+let a = 12
+let b = 34
+let c = Double(a)
+let d = Double(b)
 
-
+c / d
+d / c
 
 /*:
  ## Remainder Operator (Modulo Operator)
@@ -88,12 +93,16 @@ import UIKit
  ````
  */
 
+a % b
+//c % d
 
+c.truncatingRemainder(dividingBy: d)
 
 /*:
  ## Overflow
  */
-
+let num: Int8 = 9 * 9 * 9
+// 오버플로우 - 컴파일 에러
 
 
 

@@ -25,11 +25,26 @@ import UIKit
  # Variadic Parameters
  ![variadic](variadic.png)
  */
+func printSum(of nums: Int...) {
+    var sum = 0
+    for num in nums {
+        sum += num
+    }
+    print(sum)
+}
+
+printSum(of: 1, 2, 3)
 
 
+func outer() -> () -> () {
+    func inner() {
+        print("inner")
+    }
+    print("outer")
+    return inner
+}
 
-
-
+outer()()
 
 
 

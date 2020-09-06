@@ -31,6 +31,18 @@ import Foundation
  ![repeat-while](syntax-repeat-while.png)
  */
 
+var num = 100
+while num < 100 {
+    num += 1
+}
+num
+
+num = 100
+repeat {
+    num += 1
+} while num < 100
+
+num
 
 
 

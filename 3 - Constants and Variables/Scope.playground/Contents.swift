@@ -26,10 +26,13 @@
 
 // #1
 
-
+let g1 = 123
 
 func doSomething() {
    // #3
+    g1
+    g2
+    
    
    if true {
       // #4
@@ -38,6 +41,7 @@ func doSomething() {
    // #5
 }
 
+let g2 = 123
 
 // #2
 

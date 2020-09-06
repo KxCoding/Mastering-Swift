@@ -24,13 +24,51 @@ import UIKit
 /*:
  # Expression Pattern
  */
+let a = 1
+switch a {
+case 0...10:
+    print("0 ~ 10")
+default:
+    break
+}
 
 
+// 이항 연산자
 
-/*:
- ## Pattern Matching Operator
- ````
- a ~= b
- ````
- */
+struct Size {
+    var width = 0.0
+    var height = 0.0
+    
+    // case 뒤에오는 자료형, 두번째 자료형은 value expression의 자료형
+    static func ~=(left: Range<Int>, right: Size) -> Bool {
+        return left.contains(Int(right.width))
+    }
+}
+
+let s = Size(width: 10, height: 20)
+
+switch s {
+case 1..<9:
+    print("1 ~ 9")
+default:
+    break
+}
+
+struct Size2 {
+    var width = 0.0
+    var height = 0.0
+    
+    static func ~=(left: Range<Int>, right: Size2) -> Bool {
+        return left.contains(Int(right.width))
+    }
+}
+
+let s2 = Size2(width: 55, height: 22)
+switch s2 {
+case 1..<10:
+    print("")
+default:
+    print("")
+}
+
 

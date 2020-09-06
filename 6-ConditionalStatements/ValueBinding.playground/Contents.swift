@@ -28,9 +28,25 @@ import UIKit
  */
 
 
+let a = 1
+switch a {
+case let x where x > 100: // x에 a값 복사, 이 케이스에서만 x 사용 가능 & 100도 초과해야 가능
+    // let - 상수로 바인딩해서 변경 안됨. 변경을 원하면 var x로
+    print(x)
+default:
+    break
+}
 
-
-
+let pt = (1, 2)
+switch pt {
+case let(x, y):
+    print(x, y)
+case (let x, let y):
+    print(x, y)
+case (let x, var y):
+    print(x, y)
+case let(x, _):
+    print(x)
 
 
 

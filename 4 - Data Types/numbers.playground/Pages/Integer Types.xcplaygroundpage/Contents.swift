@@ -28,6 +28,9 @@ import UIKit
  
  ![IntegerTypes](integer-types.png)
  */
+Int8.min // -127
+Int8.max
+MemoryLayout<Int8>.size // 1바이트
 
 
 
@@ -37,14 +40,19 @@ import UIKit
  
  ![SignedUnsigned](signed-unsigned.png)
  */
-
+UInt8.min // 0
+UInt8.max // 255
 
 
 
 /*:
  ## Int & UInt
  */
+// Int는 8바이트. 내컴퓨터에서
+MemoryLayout<Int>.size
+// 8바이트는 굉장히 티끌이기 때문에 뭐 그냥 막 사용해도 된다.
 
-
+let num = 8
+type(of: num) // 타입 확인방법
 
 //: [Next](@next)
