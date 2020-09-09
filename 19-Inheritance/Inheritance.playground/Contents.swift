@@ -25,9 +25,26 @@ import UIKit
  # Inheritance
  ![inheritance](inheritance.png)
  */
+class Figure {
+    var name = "Unknown"
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    func draw() {
+        print("draw \(name)")
+    }
+}
 
+class Circle: Figure {
+    var radius = 0.0
+}
 
-
+let c = Circle(name: "Circle") // 생성자를 상속받았음.
+c.radius
+c.name
+c.draw()
 
 
 
@@ -37,7 +54,16 @@ import UIKit
  ![final class](final-class.png)
  */
 
+// final: 상속을 금지한다.
+// 파이널 클래스 - 상속이 금지된 클래스.
+final class Rectangle: Figure {
+    var width = 0.0
+    var height = 0.0
+}
 
+//class Square: Rectangle {
+//
+//}
 
 
 
