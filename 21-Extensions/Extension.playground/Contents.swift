@@ -34,3 +34,20 @@ struct Size {
 
 
 
+extension Size {
+    var area: Double {
+        return width * height
+    }
+}
+let s = Size()
+s.width
+s.height
+s.area
+
+// 프로토콜 채용
+// 익스텐션을 이용하여 프로토콜을 구현할 수 있다.
+extension Size: Equatable {
+    public static func == (lhs: Size, rhs: Size) -> Bool {
+        return lhs.width == rhs.width && lhs.height == rhs.height
+    }
+}
