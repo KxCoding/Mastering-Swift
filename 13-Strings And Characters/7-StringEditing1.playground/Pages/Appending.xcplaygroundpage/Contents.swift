@@ -25,6 +25,17 @@ import UIKit
  # Appending Strings and Characters
  */
 
+var str = "Hello"
+str.append(", ")
+str.append("Swift")
+str
+
+let new = str.appending("Swift")
+str
+new
+
+"Hello".appendingFormat("%.1f", 0.1232)
+
 
 
 

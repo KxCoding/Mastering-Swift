@@ -25,36 +25,10 @@ import UIKit
  # Substring
  */
 
+var str = "Hello, Swift"
+let l = str.lowercased()
 
+var first = str.prefix(2)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+str[str.index(str.startIndex, offsetBy: 3)...]
 

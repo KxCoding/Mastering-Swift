@@ -29,14 +29,34 @@ import Foundation
 
 
 
+var str = "Hello, Awesome Swift!!!"
+
+let lastCharIndex = str.index(before: str.endIndex)
+var removed = str.remove(at: lastCharIndex)
+
+removed
+str
+
+str.removeFirst()
+str
 
 
+str.removeFirst(2)
 
 
+if let range = str.range(of: "Awesome") {
+    str.removeSubrange(range)
+    str
+}
 
+str.removeAll()
+str
 
+str = "Hello, Awesome Swift!!!"
+str.dropLast()
+str.dropFirst()
+str.dropFirst(2)
 
-
-
-
-
+str.drop { (ch) -> Bool in
+    return ch != ","
+}

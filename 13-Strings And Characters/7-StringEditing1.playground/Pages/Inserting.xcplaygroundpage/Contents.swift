@@ -28,8 +28,19 @@ import Foundation
  */
 
 
+var str = "Hello"
+str.insert(",", at: str.index(str.startIndex, offsetBy: 5))
 
+str.insert(contentsOf: "TTT", at: str.index(after: str.startIndex))
+if let sIndex = str.firstIndex(of: "S") {
+    str.insert(contentsOf: "Awesome", at: sIndex)
+}
+str
 
+if let ldx = str.lastIndex(of: "T") {
+    str.insert(" ", at: str.index(after: ldx))
+    str
+}
 
 
 

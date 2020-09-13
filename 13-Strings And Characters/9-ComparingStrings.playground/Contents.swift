@@ -28,6 +28,14 @@ import UIKit
 
 
 
+"a" == "A"
+
+"a".compare("A") == .orderedSame
+
+"a".caseInsensitiveCompare("A") == .orderedSame
+
+var str = "Hello, Swift Programming!"
+str.hasPrefix("Hello")
 
 
 

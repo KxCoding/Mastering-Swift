@@ -27,6 +27,22 @@ import Foundation
  */
 
 
+var str = "Hello, Objective-C"
+if let range = str.range(of: "Objective-C") {
+    str.replaceSubrange(range, with: "Swift")
+}
 
+str
+
+if let range = str.range(of: "Hello") {
+    let s = str.replacingCharacters(in: range, with: "Hi")
+    
+    s
+    str // 원본은 안바뀜
+}
+
+// 위의 과정을 한번에.!
+var s = str.replacingOccurrences(of: "Swift", with: "Awesome Swift")
+s
 
 //: [Next](@next)

@@ -24,4 +24,55 @@ import UIKit
 /*:
  # String Basics
  */
+let str = "Swift"
+
+let firstIdx = str.startIndex
+print(str[firstIdx])
+
+let lastCharIdx = str.index(before: str.endIndex)
+print(str[lastCharIdx])
+
+
+
+
+let b = String(12)
+let c = String(12.34)
+let d = String(str)
+
+let hex = String(123, radix: 16)
+
+let repeatStr = String(repeating: "as1", count: 3)
+repeatStr
+
+let unicode = "\u{1f44f}"
+
+
+str.isEmpty
+
+"apple" < "Apple"
+
+
+"a" < "A"
+"a" < "b"
+
+str.lowercased()
+str.uppercased()
+
+str.capitalized
+
+str
+
+for char in "Hello" {
+    print(char)
+}
+
+let num = "12123123"
+num.randomElement()
+
+num.shuffled()
+
+
+
+
+
 
