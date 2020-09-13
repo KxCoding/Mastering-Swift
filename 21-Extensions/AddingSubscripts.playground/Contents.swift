@@ -25,4 +25,31 @@ import UIKit
  # Adding Subscripts
  */
 
+//extension String {
+//    subscript(idx: Int) -> String? {
+//        guard (0..<count).contains(idx) else {
+//            return nil
+//        }
+//
+//        let target = index(startIndex, offsetBy: idx)
+//        return String(self[target])
+//    }
+//}
+//
+//let str = "Swift"
+//str[0]
 
+
+extension String {
+    subscript(idx: Int) -> String? {
+        guard count > idx else {
+            return nil
+        }
+        let ii = index(startIndex, offsetBy: idx)
+        let result = self[ii]
+        return String(result)
+    }
+}
+
+let str = "Swift"
+str[0]
