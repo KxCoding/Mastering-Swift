@@ -26,7 +26,28 @@ import UIKit
  ![associated-values](associated-values.png)
  */
 
+enum VidoInterface {
+    case dvi(width: Int, height: Int)
+    case hdmi(Int, Int, Double, Bool)
+    case displayPort(CGSize)
+}
 
+var input = VidoInterface.dvi(width: 2048, height: 1536)
+
+switch input {
+case .dvi(width: 2048, height: 1536):
+    print("dvi 2048 x 1536")
+case .dvi(width: 2048, height: _):
+    print("dvi 2048 x Any")
+case .dvi:
+    print("dvi")
+case .hdmi(let width, let height, let version, var audioEnabled):
+    print("hdmi \(width)x\(height)")
+case let .displayPort(size): // enumeration case pattern
+    print("dp")
+}
+
+input = .hdmi(3840, 2160, 2.1, true)
 
 
 

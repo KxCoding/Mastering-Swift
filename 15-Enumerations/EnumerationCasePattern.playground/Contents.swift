@@ -27,7 +27,25 @@ import UIKit
  */
 
 
+enum Transportation {
+    case bus(number: Int)
+    case taxi(company: String, number: String)
+    case subway(lineNumber: Int, express: Bool)
+}
 
+var tpt = Transportation.bus(number: 7)
+
+switch tpt {
+case .bus(number: let n):
+    print(n)
+case .taxi(company: let c, number: var n):
+    print(c, n)
+case let.subway(lineNumber: l, express: e):
+    print(l, e)
+    // 연관값을 가진 열거형
+    // If문, guard문,, 등에서 사용
+    // 바인딩해서 값을 사용하지 않을거라면 let은 써주지 않아도된ㄷㅏ..
+}
 
 
 
