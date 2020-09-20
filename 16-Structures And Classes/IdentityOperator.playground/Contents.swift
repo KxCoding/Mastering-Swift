@@ -25,6 +25,19 @@ import UIKit
  # Identity Operator
  ![identity-op](identity-op.png)
  */
+class A {
+    
+}
+
+let a = A()
+let b = a
+let c = A()
+
+a === b
+a !== b
+
+a !== c
+// identical - 주소가 같다. Equal - 값이 같다
 
 
 
