@@ -26,24 +26,15 @@
 import Foundation
 
 /*:
-# Property Wrapper
-*/
+ # Hashable for Classes
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
+class Person {
+   let name: String
+   let age: Int
+   
    init() {
-      print(#function)
-      wrappedValue = 0
+      name = "Jane Doe"
+      age = 0
    }
 }
-
-
-struct MyType {
-
-}
-
-let t = MyType()
-
-

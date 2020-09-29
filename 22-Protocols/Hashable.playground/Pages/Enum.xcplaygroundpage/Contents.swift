@@ -21,29 +21,24 @@
 //  THE SOFTWARE.
 //
 
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Hashable for Enumerations
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+enum ServiceType {
+   case onlineCourse
+   case offlineCamp
 }
 
 
-struct MyType {
-
+enum VideoInterface {
+   case dvi(width: Int, height: Int)
+   case hdmi(width: Int, height: Int, version: Double, audioEnabled: Bool)
+   case displayPort(size: CGSize)
 }
 
-let t = MyType()
 
 
+//: [Next](@next)

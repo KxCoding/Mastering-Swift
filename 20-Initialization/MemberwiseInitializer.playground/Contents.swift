@@ -20,30 +20,32 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Memberwise Initializer
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+struct First {
+   let a: Int
+   let b: Int
+   let c: Int
 }
 
 
-struct MyType {
-
+struct Second {
+   let a: Int = 0
+   let b: Int = 1
+   let c: Int
 }
 
-let t = MyType()
 
+struct Third {
+   var a: Int = 0
+   var b: Int = 1
+   var c: Int
+   
+   
+   
+}
 

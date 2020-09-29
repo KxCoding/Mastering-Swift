@@ -21,29 +21,23 @@
 //  THE SOFTWARE.
 //
 
-//: [Previous](@previous)
-
 import Foundation
 
 /*:
-# Property Wrapper
-*/
+ # Comparable for Enumerations
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+enum Weekday {
+   case sunday
+   case monday
+   case tuesday
+   case wednesday
+   case thursday
+   case friday
+   case saturday
 }
 
 
-struct MyType {
-
-}
-
-let t = MyType()
 
 
+//: [Next](@next)

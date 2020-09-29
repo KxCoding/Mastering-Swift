@@ -26,24 +26,16 @@
 import Foundation
 
 /*:
-# Property Wrapper
-*/
+ # Hashable for Structures
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+struct Person {
+   let name: String
+   let age: Int
 }
 
 
-struct MyType {
-
-}
-
-let t = MyType()
 
 
+
+//: [Next](@next)

@@ -26,24 +26,31 @@
 import Foundation
 
 /*:
-# Property Wrapper
-*/
+ # Comparable for Classes
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
+enum MembershipGrade {
+   case normal
+   case premium
+   case vip
+   case vvip
+}
 
-   init() {
-      print(#function)
-      wrappedValue = 0
+class Membership {
+   let name: String
+   let grade: MembershipGrade
+   let point: Int
+   
+   init(name: String, grade: MembershipGrade, point: Int) {
+      self.name = name
+      self.grade = grade
+      self.point = point
    }
 }
 
+let a = Membership(name: "James", grade: .premium, point: 123)
+let b = Membership(name: "Yuna", grade: .vvip, point: 2020)
+let c = Membership(name: "Paul", grade: .normal, point: 37)
 
-struct MyType {
-
-}
-
-let t = MyType()
-
-
+a < b
+b > c

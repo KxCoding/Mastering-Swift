@@ -20,30 +20,22 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Dynamic Member Lookup
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+struct Person {
+   var name: String
+   var address: String
 }
 
 
-struct MyType {
 
-}
 
-let t = MyType()
+
+
+
 
 

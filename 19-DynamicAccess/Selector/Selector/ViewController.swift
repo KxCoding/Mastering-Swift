@@ -21,29 +21,35 @@
 //  THE SOFTWARE.
 //
 
-//: [Previous](@previous)
+import UIKit
 
-import Foundation
-
-/*:
-# Property Wrapper
-*/
-
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
+class ViewController: UIViewController {
+   
+   @IBOutlet weak var numberLabel: UILabel!
+   
+   func reset() {
+      numberLabel.text = "0"
+   }
+   
+   func update(_ sender: Any) {
+      let rnd = Int.random(in: 1...1000)
+      numberLabel.text = "\(rnd)"
+   }
+   
+   lazy var updateBtn: UIButton = {
+      let btn = UIButton(type: .system)
+      btn.setTitle("Update", for: .normal)
+      btn.frame = CGRect(x: 0.0, y: self.view.frame.height - 100, width: view.frame.width, height: 60.0)
+      return btn
+   }()
+   
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
+      view.addSubview(updateBtn)
+      
+      
    }
 }
-
-
-struct MyType {
-
-}
-
-let t = MyType()
-
 

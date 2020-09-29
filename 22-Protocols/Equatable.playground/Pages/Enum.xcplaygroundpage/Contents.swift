@@ -21,29 +21,32 @@
 //  THE SOFTWARE.
 //
 
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Equatable for Enumerations
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+enum Gender {
+   case female
+   case male
 }
 
 
-struct MyType {
-
+struct MySize {
+   let width: Double
+   let height: Double
 }
 
-let t = MyType()
+enum VideoInterface {
+   case dvi(width: Int, height: Int)
+   case hdmi(width: Int, height: Int, version: Double, audioEnabled: Bool)
+   case displayPort(size: CGSize)
+}
+
+let a = VideoInterface.hdmi(width: 2560, height: 1440, version: 2.0, audioEnabled: true)
+let b = VideoInterface.displayPort(size: CGSize(width: 3840, height: 2160))
 
 
+
+//: [Next](@next)

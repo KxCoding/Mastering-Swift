@@ -21,29 +21,18 @@
 //  THE SOFTWARE.
 //
 
-//: [Previous](@previous)
+import UIKit
 
-import Foundation
+class MyCell: UITableViewCell {
+   
+}
 
-/*:
-# Property Wrapper
-*/
-
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
+class CellRegistrationViewController: UIViewController {
+   
+   let tableView = UITableView()
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
    }
 }
-
-
-struct MyType {
-
-}
-
-let t = MyType()
-
-

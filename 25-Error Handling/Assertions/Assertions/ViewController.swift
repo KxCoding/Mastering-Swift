@@ -21,29 +21,25 @@
 //  THE SOFTWARE.
 //
 
-//: [Previous](@previous)
+import UIKit
 
-import Foundation
-
-/*:
-# Property Wrapper
-*/
-
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
+class ViewController: UIViewController {
+   
+   @IBOutlet weak var inputField: UITextField!
+   
+   
+   @IBAction func processValue(_ sender: Any) {
+      guard let value = inputField.text, let number = Int(value) else {
+         return
+      }
+     
+      
+      print(number)
+   }
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
    }
 }
-
-
-struct MyType {
-
-}
-
-let t = MyType()
-
 

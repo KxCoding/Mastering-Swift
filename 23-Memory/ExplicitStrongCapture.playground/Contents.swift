@@ -20,30 +20,31 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Explicit Strong Capture
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
+struct PersonValue {
+   let name: String = "Jane Doe"
+   let age: Int = 0
+   
+   func doSomething() {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+         print(name, age)
+      }
    }
 }
 
-
-struct MyType {
-
+class PersonObject {
+   let name: String = "John Doe"
+   let age: Int = 0
+   
+   func doSomething() {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 1) { 
+         print(name, age)
+      }
+   }
 }
-
-let t = MyType()
-
 

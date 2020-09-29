@@ -21,29 +21,22 @@
 //  THE SOFTWARE.
 //
 
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Keypath String Expression
+ ![syntax](keypath-string-expr.png)
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+class Person: NSObject {
+   @objc let name: String = "Jane Doe"
+   @objc var age: Int = 0
 }
 
-
-struct MyType {
-
-}
-
-let t = MyType()
+let p = Person()
 
 
+
+
+
+//: [Next](@next)

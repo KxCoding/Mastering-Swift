@@ -20,30 +20,25 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Metatype
+ 
+ ## Static Type & Dynamic Type
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+func checkType(of value: Any) {
+   let typeOfValue = type(of: value)
+   
+   print("\(value) => \(typeOfValue)")
 }
 
 
-struct MyType {
 
-}
+let name = "Jane Doe"
+checkType(of: name)
 
-let t = MyType()
-
+let age = 0
+checkType(of: age)
 

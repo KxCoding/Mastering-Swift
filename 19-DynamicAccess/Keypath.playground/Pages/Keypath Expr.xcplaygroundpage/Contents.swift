@@ -26,24 +26,36 @@
 import Foundation
 
 /*:
-# Property Wrapper
-*/
+ # Keypath Expression
+ ![syntax](keypath-expr.png)
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
-   }
+struct Person {
+   let name: String = "Jane Doe"
+   var age: Int = 0
 }
 
+let p = Person()
 
-struct MyType {
 
-}
 
-let t = MyType()
+
+
+
+
+
+
+/*:
+ # Keypath Types
+ ![types](keypath-types.png)
+ */
+
+
+
+
+
+
+
+
 
 

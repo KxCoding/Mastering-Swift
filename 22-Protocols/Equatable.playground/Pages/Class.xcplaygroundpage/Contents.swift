@@ -26,24 +26,19 @@
 import Foundation
 
 /*:
-# Property Wrapper
-*/
+ # Comparable for Classes
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
+class Person {
+   let name: String
+   let age: Int
+   
+   init(name: String, age: Int) {
+      self.name = name
+      self.age = age
    }
 }
 
 
-struct MyType {
-
-}
-
-let t = MyType()
-
-
+let a = Person(name: "Steve", age: 50)
+let b = Person(name: "Paul", age: 27)

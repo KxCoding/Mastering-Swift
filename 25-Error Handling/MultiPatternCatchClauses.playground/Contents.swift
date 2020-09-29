@@ -20,30 +20,47 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Multi-pattern Catch Clauses
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
+enum DataParsingError: Error {
+   case invalidType
+   case invalidField
+   case missingRequiredField(String)
+}
 
-   init() {
-      print(#function)
-      wrappedValue = 0
+func parsing(data: [String: Any]) throws {
+   guard let _ = data["name"] else {
+      throw DataParsingError.missingRequiredField("name")
    }
+   
+   guard let _ = data["age"] as? Int else {
+      throw DataParsingError.invalidType
+   }
+   
+   // Parsing
+}
+
+do {
+   try parsing(data: [:])
+} catch DataParsingError.invalidType {
+   
+} catch DataParsingError.invalidField {
+   
+} catch DataParsingError.missingRequiredField(let fieldName) {
+   
+} catch {
+   
 }
 
 
-struct MyType {
-
+do {
+   try parsing(data: [:])
+} catch DataParsingError.missingRequiredField(let fieldName) {
+   
+} catch {
+   
 }
-
-let t = MyType()
-
-

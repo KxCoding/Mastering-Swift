@@ -21,29 +21,25 @@
 //  THE SOFTWARE.
 //
 
-//: [Previous](@previous)
+import UIKit
 
-import Foundation
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-/*:
-# Property Wrapper
-*/
+   var window: UIWindow?
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
+   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+      return true
+   }
 
-   init() {
-      print(#function)
-      wrappedValue = 0
+   // MARK: UISceneSession Lifecycle
+   @available(iOS 13.0, *)
+   func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
+      return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+   }
+
+   @available(iOS 13.0, *)
+   func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
    }
 }
-
-
-struct MyType {
-
-}
-
-let t = MyType()
-
 

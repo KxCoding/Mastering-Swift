@@ -20,30 +20,16 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
+import UIKit
 
-//: [Previous](@previous)
-
-import Foundation
-
-/*:
-# Property Wrapper
-*/
-
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
-
-   init() {
-      print(#function)
-      wrappedValue = 0
+class GenericFactoryViewController: UIViewController {
+   
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
    }
 }
 
-
-struct MyType {
-
+extension UIViewController {
+   
 }
-
-let t = MyType()
-
-

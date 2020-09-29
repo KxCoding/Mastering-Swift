@@ -20,30 +20,27 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 //
-
-//: [Previous](@previous)
-
-import Foundation
+import UIKit
 
 /*:
-# Property Wrapper
-*/
+ # Selector
+ ![selector](selector.png)
+ */
 
-@propertyWrapper
-class SimpleWrapper {
-   var wrappedValue: Int
+struct Figure {
+   let color: UIColor = .blue
 
-   init() {
-      print(#function)
-      wrappedValue = 0
+   func draw() {
+      print("draw something")
    }
 }
 
 
-struct MyType {
 
-}
 
-let t = MyType()
+
+
+
+
 
 
