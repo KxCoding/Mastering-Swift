@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sync-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="SyncViewController" customModule="Concurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7Bg-k4-0zj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="127.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qu9-nG-bBS">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="42.5"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="YT4-X7-8PK">
+                                        <rect key="frame" x="0.0" y="42.5" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="9Ou-mN-Mf5">
+                                        <rect key="frame" x="0.0" y="85" width="414" height="42.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="QIT-gX-tz7">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PZf-qB-km7"/>
+                                    <barButtonItem style="plain" id="atG-aV-Wwm">
+                                        <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="wmZ-xr-xBM">
+                                            <rect key="frame" x="63" y="10" width="288" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </slider>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="vIN-6D-I2p"/>
+                                </items>
+                            </toolbar>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Q0V-YP-T9P">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7Bg-k4-0zj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3GQ-1y-PD3"/>
+                            <constraint firstItem="QIT-gX-tz7" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="3N8-6d-06W"/>
+                            <constraint firstItem="7Bg-k4-0zj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Cf9-1s-Rjv"/>
+                            <constraint firstItem="QIT-gX-tz7" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="GvH-Ra-qK3"/>
+                            <constraint firstItem="Q0V-YP-T9P" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="TCW-5Y-UlH"/>
+                            <constraint firstItem="Q0V-YP-T9P" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UWw-61-qQF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7Bg-k4-0zj" secondAttribute="trailing" id="cTC-gW-sp9"/>
+                            <constraint firstItem="QIT-gX-tz7" firstAttribute="top" secondItem="7Bg-k4-0zj" secondAttribute="bottom" priority="999" id="hY2-Mj-zqv"/>
+                            <constraint firstItem="QIT-gX-tz7" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="vvU-uB-Zca"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sync" id="zkA-0j-5Pa">
+                        <barButtonItem key="rightBarButtonItem" title="Download" id="Ik1-XF-3VS">
+                            <connections>
+                                <action selector="download:" destination="Y6W-OH-hqX" id="TjC-5R-iJk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageView1" destination="Qu9-nG-bBS" id="hJY-ut-r6d"/>
+                        <outlet property="imageView2" destination="YT4-X7-8PK" id="2ez-Zd-G2v"/>
+                        <outlet property="imageView3" destination="9Ou-mN-Mf5" id="9jg-FG-kKs"/>
+                        <outlet property="loader" destination="Q0V-YP-T9P" id="ffg-Vu-UNP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
